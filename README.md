@@ -4,6 +4,23 @@
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
-# 💫 About Me:
-# 👋 Hi there! I'm David Del Val<br><br>## 🚀 What I'm up to<br><br>- 💪 Currently working on **CalSweat**, a fitness and nutrition app that tracks workouts and provides valuable metrics for calorie tracking and workout progress.<br>- 📚 Learning about writing an interpreter in Go. Always excited to dive into new programming challenges!<br>- 🎓 Pursuing further studies in Computer Science at Washington State University.<br><br>## 💻 Tech Stack<br><br>- Languages: Java, C++, C#, Python, TypeScript, JavaScript, SQL, Lua<br>- Frontend: React, React Native, Angular<br>- Backend: .NET, Spring Boot, FastAPI, GraphQL<br>- DevOps: Docker, Kubernetes, CI/CD (CircleCI, GitHub Actions)<br>- Databases: MongoDB, PostgreSQL<br><br>## 🤔 Ask me about<br><br>- Building scalable fitness apps with microservices architecture<br>- Optimizing ETL pipelines for processing millions of data points<br>- Implementing real-time GPS tracking in fleet management systems<br>- Balancing computer science studies with practical software development<br><br>## ⚡ Fun fact<br><br>I once processed over 3 million food product entries in a single ETL pipeline. Big data isn't just a buzzword - it's a day's work!<br><br>Feel free to connect with me or check out my projects below!
+# 👋 Hi there! I'm David Del Val
 
+## 🚀 What I'm up to
+
+- 💪 Currently working on **CalSweat**, a fitness and nutrition app that tracks workouts and provides valuable metrics for calorie tracking and workout progress.
+- 📚 Learning about writing an interpreter in Go. Always excited to dive into new programming challenges!
+- 🎓 Pursuing further studies in Computer Science at Washington State University.
+
+## 🤔 Ask me about
+
+- Building scalable fitness apps with microservices architecture
+- Optimizing data processing pipelines for handling millions of data points
+- Implementing real-time GPS tracking in fleet management systems
+- Balancing computer science studies with practical software development
+
+## ⚡ Fun fact
+
+I once processed over 3 million food product entries for a nutrition database. Big data isn't just a buzzword - it's a day's work!
+
+Feel free to connect with me or check out my projects below!
