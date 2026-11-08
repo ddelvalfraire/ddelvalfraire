@@ -1,0 +1,57 @@
+name: Project bench
+on:
+  schedule:
+    - cron: '23 9 * * *'
+  workflow_dispatch:
+  push:
+    paths: ['scripts/**', 'banner.ps', 'README.template.md', '.github/workflows/nightly.yml']
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: bench-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - run: python3 scripts/check.py --pending
+      - uses: oven-sh/setup-bun@735343b667d3e6f658f44d0eca948eb6282f2b76 # v2.0.2
+        with:
+          bun-version: '1.4.4'
+      - run: rustup toolchain install 1.99.1 --profile minimal && rustup default 1.99.1
+      - run: python3 -m unittest discover -s scripts -v
+      - run: python3 scripts/check.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: bench
+          path: |
+            README.md
+            results/latest.json
+            assets/banner.svg
+          retention-days: 14
+  publish:
+    needs: check
+    if: always() && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - run: python3 scripts/check.py --pending
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        continue-on-error: true
+        with:
+          name: bench
+      - name: Commit latest attempt, including failures
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md results/latest.json assets/banner.svg
+          git diff --cached --quiet || git commit -m 'Record latest project check attempt'
+          git push
