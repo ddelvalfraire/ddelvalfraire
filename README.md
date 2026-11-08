@@ -49,14 +49,14 @@ Its particle demo needs a separate WASM build; see the project's setup instructi
 Revision: `e949359257e49c6ac54d2c33076bd9b21ee44c97`
 
 
-<details><summary>2026-11-08T22:57:41.376468+00:00: exit 0, 0.02s</summary>
+<details><summary>2026-11-08T23:03:44.494406+00:00: exit 0, 0.004s</summary>
 
 <pre>$ git init -q
 </pre>
 </details>
 
 
-<details><summary>2026-11-08T22:57:41.396982+00:00: exit 0, 0.558s</summary>
+<details><summary>2026-11-08T23:03:44.498130+00:00: exit 0, 0.365s</summary>
 
 <pre>$ git fetch --depth=1 https://github.com/ddelvalfraire/postscript-interpreter.git e949359257e49c6ac54d2c33076bd9b21ee44c97
 From https://github.com/ddelvalfraire/postscript-interpreter
@@ -64,48 +64,48 @@ From https://github.com/ddelvalfraire/postscript-interpreter
 </details>
 
 
-<details><summary>2026-11-08T22:57:41.955411+00:00: exit 0, 0.074s</summary>
+<details><summary>2026-11-08T23:03:44.862765+00:00: exit 0, 0.032s</summary>
 
 <pre>$ git checkout --detach FETCH_HEAD
 HEAD is now at e949359 docs: add development section and fix markdownlint warnings</pre>
 </details>
 
 
-<details><summary>2026-11-08T22:57:42.029613+00:00: exit 0, 0.012s</summary>
+<details><summary>2026-11-08T23:03:44.894753+00:00: exit 0, 0.004s</summary>
 
 <pre>$ bun --version
 1.4.4</pre>
 </details>
 
 
-<details><summary>2026-11-08T22:57:42.041833+00:00: exit 0, 0.041s</summary>
+<details><summary>2026-11-08T23:03:44.898390+00:00: exit 0, 0.216s</summary>
 
 <pre>$ bun install --frozen-lockfile --ignore-scripts
 bun install v1.4.4 (38afee6c8)
 
-36 packages installed [29.00ms]</pre>
+37 packages installed [178.00ms]</pre>
 </details>
 
 
-<details><summary>2026-11-08T22:57:42.083122+00:00: exit 0, 0.074s</summary>
+<details><summary>2026-11-08T23:03:45.114410+00:00: exit 0, 0.115s</summary>
 
 <pre>$ bun test
-(pass) putinterval &gt; string negative i [0.01ms]
-(pass) putinterval &gt; array into array mutates dst [0.03ms]
-(pass) putinterval &gt; type mismatch (string ← array) [0.01ms]
-(pass) putinterval &gt; typecheck on int target [0.01ms]
-(pass) putinterval &gt; stackunderflow [0.01ms]
-(pass) cause chaining &gt; length on empty stack chains underlying error [0.02ms]
-(pass) cause chaining &gt; get on empty stack chains underlying error [0.01ms]
+(pass) false &gt; pushes boolean false [0.03ms]
+(pass) false &gt; used in expression [0.03ms]
+(pass) cause chaining &gt; eq on empty stack chains stackunderflow [0.03ms]
+(pass) cause chaining &gt; not on empty stack chains stackunderflow [0.03ms]
+(pass) cause chaining &gt; real(0) is still a number, not equal to int(0) as cross-type [0.03ms]
+
+::endgroup::
 
  737 pass
  0 fail
  1050 expect() calls
-Ran 737 tests across 21 files. [40.00ms]</pre>
+Ran 737 tests across 21 files. [102.00ms]</pre>
 </details>
 
 
-<details><summary>2026-11-08T22:57:42.157888+00:00: exit 0, 0.021s</summary>
+<details><summary>2026-11-08T23:03:45.229348+00:00: exit 0, 0.065s</summary>
 
 <pre>$ bun run packages/interpreter/profile-render.ts banner.ps
  C 590 40
@@ -127,14 +127,14 @@ Ran 737 tests across 21 files. [40.00ms]</pre>
 Revision: `2e0076e4ca40224f21c388ac471b1d92507c9519`
 
 
-<details><summary>2026-11-08T22:57:42.315605+00:00: exit 0, 0.019s</summary>
+<details><summary>2026-11-08T23:03:45.332458+00:00: exit 0, 0.008s</summary>
 
 <pre>$ git init -q
 </pre>
 </details>
 
 
-<details><summary>2026-11-08T22:57:42.334453+00:00: exit 0, 0.834s</summary>
+<details><summary>2026-11-08T23:03:45.340232+00:00: exit 0, 0.715s</summary>
 
 <pre>$ git fetch --depth=1 https://github.com/ddelvalfraire/Quanta.git 2e0076e4ca40224f21c388ac471b1d92507c9519
 From https://github.com/ddelvalfraire/Quanta
@@ -142,28 +142,28 @@ From https://github.com/ddelvalfraire/Quanta
 </details>
 
 
-<details><summary>2026-11-08T22:57:43.168037+00:00: exit 0, 0.131s</summary>
+<details><summary>2026-11-08T23:03:46.055614+00:00: exit 0, 0.215s</summary>
 
 <pre>$ git checkout --detach FETCH_HEAD
 HEAD is now at 2e0076e docs: humanize README and drop schema-drift section (#54)</pre>
 </details>
 
 
-<details><summary>2026-11-08T22:57:43.298727+00:00: exit 0, 0.021s</summary>
+<details><summary>2026-11-08T23:03:46.270220+00:00: exit 0, 0.016s</summary>
 
 <pre>$ cargo --version
 cargo 1.99.1 (5f94df478 2026-08-27)</pre>
 </details>
 
 
-<details><summary>2026-11-08T22:57:43.319764+00:00: exit 0, 0.04s</summary>
+<details><summary>2026-11-08T23:03:46.286165+00:00: exit 0, 0.016s</summary>
 
 <pre>$ rustc --version
 rustc 1.99.1 (58cf8f9c3 2026-10-13)</pre>
 </details>
 
 
-<details><summary>2026-11-08T22:57:43.360189+00:00: exit 0, 12.877s</summary>
+<details><summary>2026-11-08T23:03:46.301979+00:00: exit 0, 24.762s</summary>
 
 <pre>$ cargo test --locked -p quanta-core-rs
 test slo_apply_delta_20f ... ignored
