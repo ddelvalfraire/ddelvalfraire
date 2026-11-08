@@ -93,13 +93,19 @@ def check(name, directory):
         step = run(["bun", "run", "packages/interpreter/profile-render.ts", "banner.ps"], directory)
         result["steps"].append(step)
         if step["exit"] == 0:
+            validation_start = time.monotonic()
+            validation_time = dt.datetime.now(dt.timezone.utc).isoformat()
             try:
                 svg = ET.fromstring(step["output"])
-                assert svg.tag == "{http://www.w3.org/2000/svg}svg"
+                if svg.tag != "{http://www.w3.org/2000/svg}svg":
+                    raise ValueError("Root element is not SVG")
                 (ROOT / "assets").mkdir(exist_ok=True)
                 (ROOT / "assets/banner.svg").write_text(step["output"])
-            except (ET.ParseError, AssertionError) as error:
-                step.update(exit=1, output=step["output"] + f"\nInvalid SVG: {error}")
+            except (ET.ParseError, ValueError) as error:
+                result["steps"].append(dict(
+                    command="validate banner SVG (Python XML parser)", time=validation_time,
+                    seconds=round(time.monotonic() - validation_start, 3), exit=1,
+                    output=f"Invalid SVG: {error}"))
     else:
         attempt(["cargo", "--version"])
         attempt(["rustc", "--version"])

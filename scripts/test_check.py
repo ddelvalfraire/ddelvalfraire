@@ -43,6 +43,23 @@ class Checks(unittest.TestCase):
             self.assertEqual(run.call_count, 1)
             self.assertIn("FAIL", check.render({"Quanta": result}))
 
+    def test_invalid_svg_preserves_renderer_evidence_and_previous_banner(self):
+        for output in ("not SVG", "<html/>" ):
+            with self.subTest(output=output), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                (root / "packages/interpreter").mkdir(parents=True)
+                (root / "banner.ps").write_text("(sample) print")
+                (root / "assets").mkdir()
+                (root / "assets/banner.svg").write_text("previous valid banner")
+                measured = dict(command="renderer", time="now", seconds=0, exit=0, output=output)
+                with patch.object(check, "ROOT", root), patch.object(check, "run", side_effect=lambda *a: measured.copy()):
+                    result = check.check("psi", root)
+                self.assertEqual(result["steps"][-2], measured)
+                self.assertEqual(result["steps"][-1]["exit"], 1)
+                self.assertIn("Invalid SVG", result["steps"][-1]["output"])
+                self.assertIn("FAIL", check.render({"psi": result}))
+                self.assertEqual((root / "assets/banner.svg").read_text(), "previous valid banner")
+
 
 if __name__ == "__main__":
     unittest.main()
