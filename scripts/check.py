@@ -89,7 +89,8 @@ def check(name, directory):
                            'engine.onOutput = s => process.stdout.write(s);\n'
                            'const result = engine.eval(await Bun.file(process.argv[2]).text());\n'
                            'if (result.isErr()) { console.error(result.error); process.exit(1); }\n')
-        step = run(["bun", "run", str(adapter), str(ROOT / "banner.ps")], directory)
+        (directory / "banner.ps").write_bytes((ROOT / "banner.ps").read_bytes())
+        step = run(["bun", "run", "packages/interpreter/profile-render.ts", "banner.ps"], directory)
         result["steps"].append(step)
         if step["exit"] == 0:
             try:
