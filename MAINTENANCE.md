@@ -21,7 +21,7 @@ replacement. On render failure, the last valid banner stays and the check fails.
 
 The runner records the exact command, UTC start, duration, revision, exit code,
 and combined output in `results/latest.json`. README output previews are capped
-at the last 6,000 characters per command; JSON retains complete output. Exit 124
+at the last 12 lines / 1,600 characters per command; JSON retains complete output. Exit 124
 means timeout, 125 means the attempt did not finish, 127 means a missing command.
 Any nonzero step makes the project visibly FAIL. A pending result replaces the
 previous status before work begins, and results are saved after each project.

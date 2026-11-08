@@ -48,10 +48,10 @@ def render(results):
                         f"Revision: `{result['revision']}`\n")
         for step in result["steps"]:
             # HTML escaping also prevents output from closing the details element.
-            text = f"$ {step['command']}\n{step['output']}"
+            preview = f"$ {step['command']}\n" + "\n".join(step['output'].splitlines()[-12:])[-1600:]
             sections.append(f"\n<details><summary>{html.escape(step['time'])}: "
                             f"exit {step['exit']}, {step['seconds']}s</summary>\n\n"
-                            f"<pre>{html.escape(text[-6000:])}</pre>\n</details>\n")
+                            f"<pre>{html.escape(preview)}</pre>\n</details>\n")
     return "\n".join(sections)
 
 
