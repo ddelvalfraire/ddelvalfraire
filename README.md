@@ -49,14 +49,14 @@ Its particle demo needs a separate WASM build; see the project's setup instructi
 Revision: `e949359257e49c6ac54d2c33076bd9b21ee44c97`
 
 
-<details><summary>2026-11-13T17:16:51.964552+00:00: exit 0, 0.004s</summary>
+<details><summary>2026-11-14T15:53:30.385082+00:00: exit 0, 0.004s</summary>
 
 <pre>$ git init -q
 </pre>
 </details>
 
 
-<details><summary>2026-11-13T17:16:51.968281+00:00: exit 0, 0.665s</summary>
+<details><summary>2026-11-14T15:53:30.388778+00:00: exit 0, 0.565s</summary>
 
 <pre>$ git fetch --depth=1 https://github.com/ddelvalfraire/postscript-interpreter.git e949359257e49c6ac54d2c33076bd9b21ee44c97
 From https://github.com/ddelvalfraire/postscript-interpreter
@@ -64,48 +64,48 @@ From https://github.com/ddelvalfraire/postscript-interpreter
 </details>
 
 
-<details><summary>2026-11-13T17:16:52.633651+00:00: exit 0, 0.032s</summary>
+<details><summary>2026-11-14T15:53:30.953684+00:00: exit 0, 0.016s</summary>
 
 <pre>$ git checkout --detach FETCH_HEAD
 HEAD is now at e949359 docs: add development section and fix markdownlint warnings</pre>
 </details>
 
 
-<details><summary>2026-11-13T17:16:52.665496+00:00: exit 0, 0.004s</summary>
+<details><summary>2026-11-14T15:53:30.969473+00:00: exit 0, 0.001s</summary>
 
 <pre>$ bun --version
 1.4.4</pre>
 </details>
 
 
-<details><summary>2026-11-13T17:16:52.669073+00:00: exit 0, 0.365s</summary>
+<details><summary>2026-11-14T15:53:30.970917+00:00: exit 0, 0.264s</summary>
 
 <pre>$ bun install --frozen-lockfile --ignore-scripts
 bun install v1.4.4 (38afee6c8)
 
-37 packages installed [316.00ms]</pre>
+37 packages installed [228.00ms]</pre>
 </details>
 
 
-<details><summary>2026-11-13T17:16:53.033740+00:00: exit 0, 0.115s</summary>
+<details><summary>2026-11-14T15:53:31.235344+00:00: exit 0, 0.114s</summary>
 
 <pre>$ bun test
-(pass) composite reference equality &gt; two separate dict literals are not equal [0.04ms]
-(pass) composite reference equality &gt; two dict literals populated with same content still not equal [0.04ms]
-(pass) true / false as expressions &gt; double negation identity [0.03ms]
-(pass) true / false as expressions &gt; true and with false [0.03ms]
-(pass) true / false as expressions &gt; false or with true [0.03ms]
+(pass) composite reference equality &gt; two separate dict literals are not equal [0.02ms]
+(pass) composite reference equality &gt; two dict literals populated with same content still not equal [0.02ms]
+(pass) true / false as expressions &gt; double negation identity [0.02ms]
+(pass) true / false as expressions &gt; true and with false [0.05ms]
+(pass) true / false as expressions &gt; false or with true [0.02ms]
 
 ::endgroup::
 
  737 pass
  0 fail
  1050 expect() calls
-Ran 737 tests across 21 files. [102.00ms]</pre>
+Ran 737 tests across 21 files. [69.00ms]</pre>
 </details>
 
 
-<details><summary>2026-11-13T17:16:53.148730+00:00: exit 0, 0.032s</summary>
+<details><summary>2026-11-14T15:53:31.349863+00:00: exit 0, 0.033s</summary>
 
 <pre>$ bun run packages/interpreter/profile-render.ts banner.ps
  C 590 40
@@ -127,14 +127,14 @@ Ran 737 tests across 21 files. [102.00ms]</pre>
 Revision: `2e0076e4ca40224f21c388ac471b1d92507c9519`
 
 
-<details><summary>2026-11-13T17:16:53.219105+00:00: exit 0, 0.004s</summary>
+<details><summary>2026-11-14T15:53:31.413745+00:00: exit 0, 0.004s</summary>
 
 <pre>$ git init -q
 </pre>
 </details>
 
 
-<details><summary>2026-11-13T17:16:53.222750+00:00: exit 0, 1.066s</summary>
+<details><summary>2026-11-14T15:53:31.417470+00:00: exit 0, 1.066s</summary>
 
 <pre>$ git fetch --depth=1 https://github.com/ddelvalfraire/Quanta.git 2e0076e4ca40224f21c388ac471b1d92507c9519
 From https://github.com/ddelvalfraire/Quanta
@@ -142,28 +142,28 @@ From https://github.com/ddelvalfraire/Quanta
 </details>
 
 
-<details><summary>2026-11-13T17:16:54.288787+00:00: exit 0, 0.214s</summary>
+<details><summary>2026-11-14T15:53:32.483450+00:00: exit 0, 0.164s</summary>
 
 <pre>$ git checkout --detach FETCH_HEAD
 HEAD is now at 2e0076e docs: humanize README and drop schema-drift section (#54)</pre>
 </details>
 
 
-<details><summary>2026-11-13T17:16:54.503207+00:00: exit 0, 0.016s</summary>
+<details><summary>2026-11-14T15:53:32.647565+00:00: exit 0, 0.016s</summary>
 
 <pre>$ cargo --version
 cargo 1.99.1 (5f94df478 2026-08-27)</pre>
 </details>
 
 
-<details><summary>2026-11-13T17:16:54.519189+00:00: exit 0, 0.016s</summary>
+<details><summary>2026-11-14T15:53:32.663355+00:00: exit 0, 0.016s</summary>
 
 <pre>$ rustc --version
 rustc 1.99.1 (58cf8f9c3 2026-10-13)</pre>
 </details>
 
 
-<details><summary>2026-11-13T17:16:54.535047+00:00: exit 0, 25.19s</summary>
+<details><summary>2026-11-14T15:53:32.678986+00:00: exit 0, 19.29s</summary>
 
 <pre>$ cargo test --locked -p quanta-core-rs
 test slo_apply_delta_20f ... ignored
