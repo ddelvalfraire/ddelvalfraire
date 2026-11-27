@@ -49,14 +49,14 @@ Its particle demo needs a separate WASM build; see the project's setup instructi
 Revision: `e949359257e49c6ac54d2c33076bd9b21ee44c97`
 
 
-<details><summary>2026-11-26T19:09:41.814609+00:00: exit 0, 0.004s</summary>
+<details><summary>2026-11-27T19:05:07.337017+00:00: exit 0, 0.004s</summary>
 
 <pre>$ git init -q
 </pre>
 </details>
 
 
-<details><summary>2026-11-26T19:09:41.818252+00:00: exit 0, 0.264s</summary>
+<details><summary>2026-11-27T19:05:07.340679+00:00: exit 0, 0.565s</summary>
 
 <pre>$ git fetch --depth=1 https://github.com/ddelvalfraire/postscript-interpreter.git e949359257e49c6ac54d2c33076bd9b21ee44c97
 From https://github.com/ddelvalfraire/postscript-interpreter
@@ -64,30 +64,30 @@ From https://github.com/ddelvalfraire/postscript-interpreter
 </details>
 
 
-<details><summary>2026-11-26T19:09:42.082466+00:00: exit 0, 0.016s</summary>
+<details><summary>2026-11-27T19:05:07.905741+00:00: exit 0, 0.016s</summary>
 
 <pre>$ git checkout --detach FETCH_HEAD
 HEAD is now at e949359 docs: add development section and fix markdownlint warnings</pre>
 </details>
 
 
-<details><summary>2026-11-26T19:09:42.098074+00:00: exit 0, 0.001s</summary>
+<details><summary>2026-11-27T19:05:07.921550+00:00: exit 0, 0.001s</summary>
 
 <pre>$ bun --version
 1.4.4</pre>
 </details>
 
 
-<details><summary>2026-11-26T19:09:42.099413+00:00: exit 0, 0.165s</summary>
+<details><summary>2026-11-27T19:05:07.923034+00:00: exit 0, 0.214s</summary>
 
 <pre>$ bun install --frozen-lockfile --ignore-scripts
 bun install v1.4.4 (38afee6c8)
 
-37 packages installed [125.00ms]</pre>
+37 packages installed [183.00ms]</pre>
 </details>
 
 
-<details><summary>2026-11-26T19:09:42.264290+00:00: exit 0, 0.065s</summary>
+<details><summary>2026-11-27T19:05:08.137452+00:00: exit 0, 0.116s</summary>
 
 <pre>$ bun test
 (pass) operator error paths — integration &gt; sqrt of negative [0.01ms]
@@ -101,11 +101,11 @@ bun install v1.4.4 (38afee6c8)
  737 pass
  0 fail
  1050 expect() calls
-Ran 737 tests across 21 files. [61.00ms]</pre>
+Ran 737 tests across 21 files. [64.00ms]</pre>
 </details>
 
 
-<details><summary>2026-11-26T19:09:42.329483+00:00: exit 0, 0.033s</summary>
+<details><summary>2026-11-27T19:05:08.253369+00:00: exit 0, 0.032s</summary>
 
 <pre>$ bun run packages/interpreter/profile-render.ts banner.ps
  C 590 40
@@ -127,14 +127,14 @@ Ran 737 tests across 21 files. [61.00ms]</pre>
 Revision: `2e0076e4ca40224f21c388ac471b1d92507c9519`
 
 
-<details><summary>2026-11-26T19:09:42.376748+00:00: exit 0, 0.003s</summary>
+<details><summary>2026-11-27T19:05:08.300516+00:00: exit 0, 0.004s</summary>
 
 <pre>$ git init -q
 </pre>
 </details>
 
 
-<details><summary>2026-11-26T19:09:42.380254+00:00: exit 0, 0.665s</summary>
+<details><summary>2026-11-27T19:05:08.304061+00:00: exit 0, 0.916s</summary>
 
 <pre>$ git fetch --depth=1 https://github.com/ddelvalfraire/Quanta.git 2e0076e4ca40224f21c388ac471b1d92507c9519
 From https://github.com/ddelvalfraire/Quanta
@@ -142,28 +142,28 @@ From https://github.com/ddelvalfraire/Quanta
 </details>
 
 
-<details><summary>2026-11-26T19:09:43.045153+00:00: exit 0, 0.164s</summary>
+<details><summary>2026-11-27T19:05:09.220196+00:00: exit 0, 0.164s</summary>
 
 <pre>$ git checkout --detach FETCH_HEAD
 HEAD is now at 2e0076e docs: humanize README and drop schema-drift section (#54)</pre>
 </details>
 
 
-<details><summary>2026-11-26T19:09:43.209216+00:00: exit 0, 0.008s</summary>
+<details><summary>2026-11-27T19:05:09.384550+00:00: exit 0, 0.008s</summary>
 
 <pre>$ cargo --version
 cargo 1.99.1 (5f94df478 2026-08-27)</pre>
 </details>
 
 
-<details><summary>2026-11-26T19:09:43.216960+00:00: exit 0, 0.016s</summary>
+<details><summary>2026-11-27T19:05:09.392296+00:00: exit 0, 0.016s</summary>
 
 <pre>$ rustc --version
 rustc 1.99.1 (58cf8f9c3 2026-10-13)</pre>
 </details>
 
 
-<details><summary>2026-11-26T19:09:43.232556+00:00: exit 0, 15.377s</summary>
+<details><summary>2026-11-27T19:05:09.407923+00:00: exit 0, 16.149s</summary>
 
 <pre>$ cargo test --locked -p quanta-core-rs
 test slo_apply_delta_20f ... ignored
